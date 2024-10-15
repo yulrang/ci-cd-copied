@@ -29,10 +29,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-<<<<<<< HEAD
-        <p><strong>youl</strong></p>
-=======
->>>>>>> upstream/master
       </body>
     </html>
   );
