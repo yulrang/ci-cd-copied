@@ -6,6 +6,14 @@ on:
 
 jobs:
   trigger-sync:
+    if: github.repository == 'yulrang/ci-cd-copied'
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'sync'
+      - uses: actions/checkout@v4
+      - name: Sync fork
+        run: |
+          git remote add upstream https://github.com/subject-test-26/ci-cd.git
+          git fetch upstream
+          git checkout master
+          git merge upstream/master
+          git push origin master
