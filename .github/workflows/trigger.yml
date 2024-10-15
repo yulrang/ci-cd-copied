@@ -13,7 +13,7 @@ jobs:
       - name: Sync fork
         run: |
           git remote add upstream https://github.com/subject-test-26/ci-cd.git
-          git config pull.rebase false
+          git fetch upstream
           git checkout master
-          git pull upstream master
+          git merge upstream/master
           git push origin master
