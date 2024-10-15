@@ -1,5 +1,5 @@
 
 
 export default function testPage() {
-  return <p>testPage - yyy</p>;
+  return <strong>파이팅해야지~~</strong>;
 }
