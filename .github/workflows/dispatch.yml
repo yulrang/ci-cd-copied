@@ -2,7 +2,7 @@ name: Trigger Fork Repo Action
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   trigger-fork:
     if: github.repository_owner == 'subject-test-26'
