@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Sync fork
         run: |
-          git remote add origin https://github.com/subject-test-26/ci-cd.git || true
-          git fetch origin
+          git remote add upstream https://github.com/subject-test-26/ci-cd.git
+          git fetch upstream
           git checkout master
-          git merge origin/master 
+          git merge upstream/master
           git push origin master
