@@ -10,10 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Git user
+        run: |
+          git config --global user.email "your-email@example.com"
+          git config --global user.name "Your Name"
       - name: Sync fork
         run: |
           git remote add upstream https://github.com/subject-test-26/ci-cd.git
           git fetch upstream
           git checkout master
-          git merge upstream/master
+          git merge -X theirs upstream/master --allow-unrelated-histories || echo "Merge conflicts occurred"
           git push origin master
