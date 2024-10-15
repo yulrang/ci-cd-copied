@@ -6,6 +6,7 @@ on:
 
 jobs:
   trigger-sync:
+    if: github.repository == 'yulrang/ci-cd-copied'
     runs-on: ubuntu-latest
     steps:
       - run: echo 'sync'
